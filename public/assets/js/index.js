@@ -25,7 +25,7 @@ $(".create-form").on("submit", function (event) {
 
     var newBurger = {
         name: $("#burger").val().trim(),
-        sleepy: $("[name=eated]:checked").val().trim()
+        have_eaten: $("[name=eated]:checked").val().trim()
     }
 
     $.ajax("api/burgers", {
