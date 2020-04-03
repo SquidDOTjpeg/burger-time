@@ -25,9 +25,10 @@ router.post("/api/burgers", (req, res) => {
 router.put("/api/burgers/:id", (req, res) => {
     var condition = "id = " + req.params.id
 
-    console.log("Condition = " + condition)
+    console.log("Condition", condition)
 
-    burger.update({
+    burger.update(
+        {
             have_eaten: req.body.have_eaten
         },
         condition,

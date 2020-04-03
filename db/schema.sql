@@ -7,6 +7,6 @@ USE meaty_sandwichesDB;
 CREATE TABLE burgers (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(200) NOT NULL,
-    have_eaten BOOLEAN,
+    have_eaten BOOLEAN DEFAULT false,
     PRIMARY KEY(id)
 );

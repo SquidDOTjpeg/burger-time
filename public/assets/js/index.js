@@ -1,13 +1,11 @@
 $(function () {
     $(".change-eaten").on("click", function (event) {
         var id = $(this).data("id")
-        console.log(id)
-        var newEaten = $(this).data("newEaten")
-
+        var newEaten = $(this).data("neweaten")
+        console.log(newEaten)
         var newEatenState = {
             have_eaten: newEaten
         }
-
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newEatenState
